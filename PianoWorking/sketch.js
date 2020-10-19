@@ -5,21 +5,49 @@ const Bodies = Matter.Bodies;
 var engine, world; var box1;
 
 var ground;
+// setScreen("pianoScreen");
+//This function will help produce the sound, and tell you how many keys you pressed in within the current session.
+// function produceSound(key,sound) {
+//   onEvent( "keypress", function(event){
+// if (event.key === key) {
+//   playSound(sound);
+//   keyspressed++;
+//   setText("keysPressed", "Keys Pressed (Current Session): " + keyspressed);
+//   console.log(keyspressed);
+//  }
+// });
+// }
+//setScreen("pianoScreen");
+//This is the code producing sound when PRESSING desired key. 
 
-var value = "orange";
-var value2 = "darkred";
+// produceSound("t", "assets/t(l).mp3");
+// produceSound("T", "assets/T.mp3");
+// produceSound("y", "assets/y(l).mp3");
+// produceSound("Y", "assets/Y.mp3");
+// produceSound("u", "assets/u(l).mp3");
+// produceSound("i", "assets/i(l).mp3");
+// produceSound("I", "assets/I.mp3");
+// produceSound("o", "assets/o(l).mp3");
+// produceSound("O", "assets/O.mp3");
+// produceSound("p", "assets/p(l).mp3");
+// produceSound("P", "assets/P.mp3");
+// produceSound("a", "assets/a(l).mp3");
+// produceSound("s","assets/s(l).mp3");
+// produceSound("S", "assets/S.mp3");
+// produceSound("d", "assets/d(l).mp3");
+// produceSound("D", "assets/D.mp3");
+// produceSound("f", "assets/f(l).mp3");
+// produceSound("g", "assets/g(l).mp3");
+// produceSound("G", "assets/G.mp3");
+// produceSound("h", "assets/h(l).mp3");
 
-// var on1;
-// var on2;
-// var on3;
-// var on4;
-// var on5;
-// var on6;
-// var on7;
-// var on8;
-// var on9;
+// function checkKeyPress(key){
+//   if (keyCode === "65") {
+//     this.key.keyColor = "blue";
+//   } 
 
-
+//   console.log("key pr")
+// }
     function setup(){
          var canvas = createCanvas(1040, 300);
          engine = Engine.create();
@@ -27,6 +55,8 @@ var value2 = "darkred";
 
         
            key1 = new Key(50,200,50,200, "darkred");
+          //window.addEventListener("keyDown", checkKeyPress, false);
+
            key2 = new Key(152,200,50,200, "darkred");
            key3 = new Key(254,200,50,200, "darkred");
            key4 = new Key(356,200,50,200, "darkred");
@@ -111,40 +141,108 @@ var value2 = "darkred";
                  
                 }
 
-
-        function keyPressed() {
-              if (keyCode === 97) {
-                //this.Blackkey1.keyColor = "yellow";
+              //   function playNote(e){
+              //     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`),
+              //           key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
               
-                this.key1.shapeColor = "black";
-              }  
-        }
-/*
+              //     if(!key) return;
+              
+              //     key.classList.add('playing');
+              //     audio.currentTime = 0;
+              //     audio.play();
+              // }
+              
+              // window.addEventListener('keydown', playNote);
+            
+                  
+                
         function keyPressed() {
-          if (keyCode === RIGHT_ARROW) {
-            this.Blackkey2.keyColor = "yellow";
-          }  
-        }
-        function keyPressed() {
-          if (keyCode === UP_ARROW) {
-            this.Blackkey3.keyColor = "yellow";
-          }  
-        }
-        function keyPressed() {
-          if (keyCode === DOWN_ARROW) {
-            this.Blackkey4.keyColor = "yellow";
-          }  
-        
-        }
-*/
-        // function keyPressed() {
-        //   if (keyCode === LEFT_ARROW) {
-        //     this.Blackkey5.keyColor = "yellow";
-        //   }  
-        // }
 
-        // function keyPressed() {
-        //   if (keyCode === LEFT_ARROW) {
-        //     this.Blackkey6.keyColor = "yellow";
-        //   }  
-        // }
+              if (keyCode == "65") {
+              this.key3.keyColor = "red";
+              } else{
+                this.key3.keyColor = "darkred";
+              }
+
+              if (keyCode == "83") {
+                this.key4.keyColor = "red";
+                } else{
+                  this.key4.keyColor = "darkred";
+                }
+
+              if (keyCode === LEFT_ARROW) {
+                this.key1.keyColor = "red";
+              } else{
+                this.key1.keyColor = "darkred";
+              }  
+
+              if (keyCode === DOWN_ARROW) {
+                this.key2.keyColor = "red";
+              } else{
+                this.key2.keyColor = "darkred";
+              } 
+              
+              if (keyCode === UP_ARROW) {
+                this.key4.keyColor = "red";
+              } else{
+                this.key4.keyColor = "darkred";
+              }  
+
+              if (keyCode === UP_ARROW) {
+                this.key4.keyColor = "red";
+              } else{
+                this.key4.keyColor = "darkred";
+              }  
+
+              if (keyCode === SHIFT) {
+                this.key5.keyColor = "red";
+              } else{
+                this.key5.keyColor = "darkred";
+              }  
+
+              if (keyCode === BACKSPACE) {
+                this.key6.keyColor = "red";
+              } else{
+                this.key6.keyColor = "darkred";
+              }  
+
+              if (keyCode === ALT) {
+                this.key7.keyColor = "red";
+              } else{
+                this.key7.keyColor = "darkred";
+              }  
+
+              if (keyCode === TAB) {
+                this.key8.keyColor = "red";
+              } else{
+                this.key8.keyColor = "darkred";
+              }  
+
+              if (keyCode === ENTER) {
+                this.key9.keyColor = "red";
+              } else{
+                this.key9.keyColor = "darkred";
+              }  
+
+              if (keyCode === ESCAPE) {
+                this.key10.keyColor = "red";
+              } else{
+                this.key10.keyColor = "darkred";
+              }  
+
+              
+            }
+
+            window.addEventListener("keyDown", checkKeyPress, false); 
+            function checkKeyPress(key){
+              if (keyCode == "65") {
+                this.key3.keyColor = "red";
+              } 
+            }
+
+            window.addEventListener("keyDown", checkKeyPress2, false); 
+            function checkKeyPress2(key2){
+              if (keyCode == "83") {
+                this.key4.keyColor = "red";
+              } 
+            }

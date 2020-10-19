@@ -1,7 +1,7 @@
 class BlackKey {
     constructor(x, y, width, height, keyColor) {
          var options = {
-              isStatic:true
+              isStatic: true
                } 
                 this.body = Bodies.rectangle(x, y, width, height, options);
                 this.width = width; 
