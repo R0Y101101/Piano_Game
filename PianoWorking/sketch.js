@@ -158,11 +158,11 @@ var ground;
                 
         function keyPressed() {
 
-              if (keyCode == "65") {
-              this.key3.keyColor = "red";
-              } else{
-                this.key3.keyColor = "darkred";
-              }
+              // if (keyCode == "65") {
+              // this.key3.keyColor = "red";
+              // } else{
+              //   this.key3.keyColor = "darkred";
+              // }
 
               if (keyCode == "83") {
                 this.key4.keyColor = "red";
