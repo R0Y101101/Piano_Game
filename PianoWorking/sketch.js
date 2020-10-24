@@ -7,6 +7,10 @@ var engine, world; var box1;
 var ground, canvas;
 
 var pianoSoundA, pianoSoundS, pianoSoundD, pianoSoundT, pianoSoundY, pianoSoundU, pianoSoundI, pianoSoundO, pianoSoundP, pianoSoundF, key1, key2, key3, key4, key5,key6,key7,key8,key9,key10;
+var i;
+var keyPrint = ["a", "s", "d", "t", "y", "u", "i", "o", "p", "f"];
+var key1;
+var key2;
 
 // produceSound("t", "assets/t(l).mp3");
 // produceSound("T", "assets/T.mp3");
@@ -30,7 +34,7 @@ var pianoSoundA, pianoSoundS, pianoSoundD, pianoSoundT, pianoSoundY, pianoSoundU
 // produceSound("h", "assets/h(l).mp3");
 
     function setup(){
-        canvas = createCanvas(1040, 300);
+        canvas = createCanvas(1050, 400);
         engine = Engine.create();
         world = engine.world;
 
@@ -70,9 +74,12 @@ var pianoSoundA, pianoSoundS, pianoSoundD, pianoSoundT, pianoSoundY, pianoSoundU
         ground1 = new Ground(0,height, 2100,  20); 
 
     } 
-            
+       
     function draw(){ 
+    //   alert( keyPrint[i]);    
         Engine.update(engine);
+
+               
 
               background("royalblue");
 
@@ -97,13 +104,31 @@ var pianoSoundA, pianoSoundS, pianoSoundD, pianoSoundT, pianoSoundY, pianoSoundU
               miniKey6.display();
               miniKey7.display();
               miniKey8.display();
-              miniKey9.display();     
+              miniKey9.display();  
+
+              for (let i=0; i<10; i) {
+                task(i); 
+              } 
+               
+             function task(i) {   
+                setTimeout(function() { 
+                textSize(50);
+                text("hello", 200,300);
+               }, 2000 ); 
+             } 
+             // text(keyPrint[i], 200, 320);      
           } 
-                
+
+
+  
         function keyPressed() {
               if (keyCode == "65") {
                 this.key1.keyColor = "red";
                 pianoSoundA.play();
+                textSize(50); 
+                //document.write(keyPrint[0]);
+                 //key1.displayNote(keyPrint[0]);
+                 console.log(keyPrint[0]);
                 //alert("You pressed the A note");
               } else{
                 this.key1.keyColor = "darkred";
@@ -112,7 +137,10 @@ var pianoSoundA, pianoSoundS, pianoSoundD, pianoSoundT, pianoSoundY, pianoSoundU
               if (keyCode == "83") {
                 this.key2.keyColor = "red";
                 pianoSoundS.play();
+                textSize(50);
+                //document.write(keyPrint[1]);
                 //alert("You pressed the S note");
+                console.log(keyPrint[1]);
                 } else{
                   this.key2.keyColor = "darkred";
                 }
@@ -180,4 +208,5 @@ var pianoSoundA, pianoSoundS, pianoSoundD, pianoSoundT, pianoSoundY, pianoSoundU
                             } else{
                               this.key10.keyColor = "darkred";
                             }    
-          }
+                           
+          }           
