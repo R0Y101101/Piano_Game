@@ -4,34 +4,14 @@ const Bodies = Matter.Bodies;
 
 var engine, world; var box1;
 
-var ground, canvas;
+var ground1, canvas;
+ var musicNote ="";
 
-var pianoSoundA, pianoSoundS, pianoSoundD, pianoSoundT, pianoSoundY, pianoSoundU, pianoSoundI, pianoSoundO, pianoSoundP, pianoSoundF, key1, key2, key3, key4, key5,key6,key7,key8,key9,key10;
-var i;
-var keyPrint = ["a", "s", "d", "t", "y", "u", "i", "o", "p", "f"];
-var key1;
-var key2;
-
-// produceSound("t", "assets/t(l).mp3");
-// produceSound("T", "assets/T.mp3");
-// produceSound("y", "assets/y(l).mp3");
-// produceSound("Y", "assets/Y.mp3");
-// produceSound("u", "assets/u(l).mp3");
-// produceSound("i", "assets/i(l).mp3");
-// produceSound("I", "assets/I.mp3");
-// produceSound("o", "assets/o(l).mp3");
-// produceSound("O", "assets/O.mp3");
-// produceSound("p", "assets/p(l).mp3");
-// produceSound("P", "assets/P.mp3");
-// produceSound("a", "assets/a(l).mp3");
-// produceSound("s","assets/s(l).mp3");
-// produceSound("S", "assets/S.mp3");
-// produceSound("d", "assets/d(l).mp3");
-// produceSound("D", "assets/D.mp3");
-// produceSound("f", "assets/f(l).mp3");
-// produceSound("g", "assets/g(l).mp3");
-// produceSound("G", "assets/G.mp3");
-// produceSound("h", "assets/h(l).mp3");
+var pianoSoundA, pianoSoundS, pianoSoundD, pianoSoundT, pianoSoundY, pianoSoundU, pianoSoundI, pianoSoundO, pianoSoundP, pianoSoundF;
+var key1, key2, key3, key4, key5,key6,key7,key8,key9,key10;
+var miniKey1,miniKey2,miniKey3,miniKey4,miniKey5,miniKey6,miniKey7,miniKey8,miniKey9,miniKey10;
+var i =1;
+var keyPrint = ["a", "s", "d", "t", "y", "u", "i", "o", "p", "f", "s", "d", "t", "y", "u", "i", "o", "p", "f"];
 
     function setup(){
         canvas = createCanvas(1050, 400);
@@ -74,16 +54,11 @@ var key2;
         ground1 = new Ground(0,height, 2100,  20); 
 
     } 
-       
-    function draw(){ 
-    //   alert( keyPrint[i]);    
+ 
+    function draw(){   
         Engine.update(engine);
-
-               
-
-              background("royalblue");
-
-              ground1.display();
+        background("royalblue");
+        ground1.display();
 
               key1.display();
               key2.display();
@@ -106,17 +81,10 @@ var key2;
               miniKey8.display();
               miniKey9.display();  
 
-              for (let i=0; i<10; i) {
-                task(i); 
-              } 
-               
-             function task(i) {   
-                setTimeout(function() { 
-                textSize(50);
-                text("hello", 200,300);
-               }, 2000 ); 
-             } 
-             // text(keyPrint[i], 200, 320);      
+           
+          textSize(100);
+          text(keyPrint[i], 500, 80); 
+          //text(musicNote, 200, 320);    
           } 
 
 
@@ -125,11 +93,10 @@ var key2;
               if (keyCode == "65") {
                 this.key1.keyColor = "red";
                 pianoSoundA.play();
-                textSize(50); 
-                //document.write(keyPrint[0]);
-                 //key1.displayNote(keyPrint[0]);
-                 console.log(keyPrint[0]);
-                //alert("You pressed the A note");
+                 musicNote = musicNote + keyPrint[i]
+                draw();
+            
+                i++;
               } else{
                 this.key1.keyColor = "darkred";
               }
@@ -137,7 +104,8 @@ var key2;
               if (keyCode == "83") {
                 this.key2.keyColor = "red";
                 pianoSoundS.play();
-                textSize(50);
+                draw();
+                i++;
                 //document.write(keyPrint[1]);
                 //alert("You pressed the S note");
                 console.log(keyPrint[1]);
@@ -148,6 +116,8 @@ var key2;
             if (keyCode == "68") {
               this.key3.keyColor = "red";
               pianoSoundD.play();
+              draw();
+              i++;
               //alert("You pressed the D note");
               } else{
                 this.key3.keyColor = "darkred";
@@ -156,6 +126,8 @@ var key2;
               if (keyCode == "84") {
                 this.key4.keyColor = "red";
                 pianoSoundT.play();
+                draw();
+                i++;
                 //alert("You pressed the D note");
                 } else{
                   this.key4.keyColor = "darkred";
@@ -164,6 +136,8 @@ var key2;
                 if (keyCode == "89") {
                   this.key5.keyColor = "red";
                   pianoSoundY.play();
+                  draw();
+                  i++;
                   //alert("You pressed the D note");
                   } else{
                     this.key5.keyColor = "darkred";
@@ -172,6 +146,8 @@ var key2;
                   if (keyCode == "85") {
                     this.key6.keyColor = "red";
                     pianoSoundU.play();
+                    draw();
+                    i++;
                     //alert("You pressed the D note");
                     } else{
                       this.key6.keyColor = "darkred";
@@ -180,6 +156,8 @@ var key2;
                     if (keyCode == "73") {
                       this.key7.keyColor = "red";
                       pianoSoundI.play();
+                      draw();
+                      i++;
                       //alert("You pressed the D note");
                       } else{
                         this.key7.keyColor = "darkred";
@@ -188,6 +166,8 @@ var key2;
                       if (keyCode == "79") {
                         this.key8.keyColor = "red";
                         pianoSoundO.play();
+                        draw();
+                        i++;
                         //alert("You pressed the D note");
                         } else{
                           this.key8.keyColor = "darkred";
@@ -196,6 +176,8 @@ var key2;
                         if (keyCode == "80") {
                           this.key9.keyColor = "red";
                           pianoSoundP.play();
+                          draw();
+                          i++;
                           //alert("You pressed the D note");
                           } else{
                             this.key9.keyColor = "darkred";
@@ -204,6 +186,8 @@ var key2;
                           if (keyCode == "70") {
                             this.key10.keyColor = "red";
                             pianoSoundF.play();
+                            draw();
+                            i++;
                             //alert("You pressed the D note");
                             } else{
                               this.key10.keyColor = "darkred";

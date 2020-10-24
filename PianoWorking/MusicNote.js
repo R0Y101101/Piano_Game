@@ -1,15 +1,15 @@
-class MusicNote{
-    constructor(){
-        this.text1 = "tt oo pp o ii uu yy t oo ii uu y oo ii uu y tt oo pp o ii uu yy t"
-        var note = [text1];
+// class MusicNote{
+//     constructor(){
+//         this.text1 = "tt oo pp o ii uu yy t oo ii uu y oo ii uu y tt oo pp o ii uu yy t"
+//         var note = [text1];
 
-        // this.text2 = "tt oo pp o ii uu yy t oo ii uu y oo ii uu y tt oo pp o ii uu yy t"
-        // var note = [text2];
-    }
-    display(){
-        //empty
-    }
-}
+//         // this.text2 = "tt oo pp o ii uu yy t oo ii uu y oo ii uu y tt oo pp o ii uu yy t"
+//         // var note = [text2];
+//     }
+//     display(){
+//         //empty
+//     }
+// }
 // setSong("Twinkle Twinkle Little Star", "tt oo pp o ii uu yy t oo ii uu y oo ii uu y tt oo pp o ii uu yy t", 1);
 // setSong("He's A Pirate", "psdd dfgg ghff dssd psdd dfgg ghff dsd ", 2);
 // setSong("Fur Elise", "f D f D f a d s p  t u p a  u O a s  u f D f D f a d s  p  t u p a   u s a p", 3);
