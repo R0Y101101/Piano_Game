@@ -107,7 +107,7 @@ var recordKey = [];
         console.log(recordKey);
         this.key1.keyColor = "red";
         pianoSoundA.play();
-        (recordKey[i] ===keyPrint[i]) ? scoreVar = scoreVar + 1: scoreVar= scoreVar -2;
+        (recordKey[i] ===keyPrint[i]) ? scoreVar = scoreVar + 1 : scoreVar= scoreVar -2;
         draw();
    
         i++;
@@ -119,7 +119,7 @@ var recordKey = [];
         this.key2.keyColor = "red";
         recordKey.push("s");
         pianoSoundS.play();
-        (recordKey[i] ===keyPrint[i]) ? scoreVar = scoreVar + 1: scoreVar= scoreVar -2;
+        (recordKey[i] === keyPrint[i]) ? scoreVar = scoreVar + 1: scoreVar= scoreVar -2;
         draw();
         i++;
         console.log(recordKey);
