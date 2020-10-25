@@ -91,6 +91,9 @@ var recordKey = [];
 
       textSize(100);
       text(keyPrint[i], 500, 80); 
+      textSize(30);
+      text(numbers, 120, 50); 
+      text("Score: ", 20, 50); 
       
       
     } 
@@ -104,7 +107,7 @@ var recordKey = [];
         this.key1.keyColor = "red";
         pianoSoundA.play();
         musicNote = musicNote + keyPrint[i]
-        document.write(numbers);
+        // document.write(numbers);
         draw();
         const intersection = keyPrint.filter(element => recordKey.includes(element));
         console.log("score "+ intersection.length) 
