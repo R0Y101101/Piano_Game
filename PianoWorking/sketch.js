@@ -17,8 +17,9 @@ var i =0;
 
 var scoreVar = 0;
 
-var keyPrint = ["a", "s", "d", "t", "y", "u", "i", "o", "p", "f", "s", "d", "t", "y", "u", "i", "o", "p", "f"];
-
+var twinkleSong = ["t","t", "o","o", "p","p", "o", "i","i", "u","u", "y","y", "t", "o","o","i","i", "u","u","y","o","o","i","i","u","u","y","t","t","o","o","p","p","o","i","i","u","u","y","y","t"];
+var ranso = ["a", "s", "d", "t", "y", "u", "i", "o", "p", "f", "s", "d", "t", "y", "u", "i", "o", "p", "f"];
+var keyPrint= twinkleSong;
 // var recordKey = new Array(keyPrint.length);
 var recordKey = [];
 
