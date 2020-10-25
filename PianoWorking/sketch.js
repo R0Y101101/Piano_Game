@@ -15,6 +15,8 @@ var key1, key2, key3, key4, key5,key6,key7,key8,key9,key10;
 var miniKey1,miniKey2,miniKey3,miniKey4,miniKey5,miniKey6,miniKey7,miniKey8,miniKey9,miniKey10;
 var i =1;
 
+var numbers = 5;
+
 var keyPrint = ["a", "s", "d", "t", "y", "u", "i", "o", "p", "f", "s", "d", "t", "y", "u", "i", "o", "p", "f"];
 
 var recordKey = [];
@@ -90,6 +92,7 @@ var recordKey = [];
       textSize(100);
       text(keyPrint[i], 500, 80); 
       
+      
     } 
 
 
@@ -101,6 +104,7 @@ var recordKey = [];
         this.key1.keyColor = "red";
         pianoSoundA.play();
         musicNote = musicNote + keyPrint[i]
+        document.write(numbers);
         draw();
         const intersection = keyPrint.filter(element => recordKey.includes(element));
         console.log("score "+ intersection.length) 
