@@ -13,7 +13,7 @@ var pianoSoundA, pianoSoundS, pianoSoundD, pianoSoundT, pianoSoundY, pianoSoundU
 var key1, key2, key3, key4, key5,key6,key7,key8,key9,key10;
 
 var miniKey1,miniKey2,miniKey3,miniKey4,miniKey5,miniKey6,miniKey7,miniKey8,miniKey9,miniKey10;
-var i =1;
+var i =0;
 
 var numbers = 5;
 
@@ -103,11 +103,12 @@ var recordKey = [];
         console.log(recordKey);
         this.key1.keyColor = "red";
         pianoSoundA.play();
-        musicNote = musicNote + keyPrint[i]
-        document.write(numbers);
+        // musicNote = musicNote + keyPrint[i]
+    
         draw();
-        const intersection = keyPrint.filter(element => recordKey.includes(element));
-        console.log("score "+ intersection.length) 
+        // const intersection = keyPrint.filter(element => recordKey.includes(element));
+        // console.log("score "+ intersection.length) 
+        // isMember ? '$2.00' : '$10.00')
         i++;
         } else{
         this.key1.keyColor = "darkred";
