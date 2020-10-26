@@ -105,7 +105,6 @@ var recordKey = [];
     function keyPressed() {
       if (keyCode == "65") {
         recordKey.push("a");
-        console.log(recordKey);
         this.key1.keyColor = "red";
         pianoSoundA.play();
         (recordKey[i] ===keyPrint[i]) ? scoreVar = scoreVar + 1 : scoreVar= scoreVar -2;
@@ -123,9 +122,6 @@ var recordKey = [];
         (recordKey[i] === keyPrint[i]) ? scoreVar = scoreVar + 1: scoreVar= scoreVar -2;
         draw();
         i++;
-        console.log(recordKey);
-
-        console.log(keyPrint[1]);
       } else{
         this.key2.keyColor = "darkred";
       }
@@ -151,7 +147,6 @@ var recordKey = [];
         (recordKey[i] ===keyPrint[i]) ? scoreVar = scoreVar + 1: scoreVar= scoreVar -2;
         draw();
         i++;
-        console.log(recordKey);
         } else{
           this.key4.keyColor = "darkred";
         }
@@ -175,8 +170,6 @@ var recordKey = [];
             (recordKey[i] ===keyPrint[i]) ? scoreVar = scoreVar + 1: scoreVar= scoreVar -2;
             draw();
             i++;
-            
-            console.log(recordKey);
             } else{
               this.key6.keyColor = "darkred";
       }   
@@ -188,7 +181,6 @@ var recordKey = [];
             (recordKey[i] ===keyPrint[i]) ? scoreVar = scoreVar + 1: scoreVar= scoreVar -2;
             draw();
             i++;
-            console.log(recordKey);
             } else{
               this.key7.keyColor = "darkred";
             }    
@@ -200,8 +192,6 @@ var recordKey = [];
               (recordKey[i] ===keyPrint[i]) ? scoreVar = scoreVar + 1: scoreVar= scoreVar -2;
               draw();
               i++;
-             
-              console.log(recordKey);
               } else{
                 this.key8.keyColor = "darkred";
               } 
@@ -213,8 +203,6 @@ var recordKey = [];
                 (recordKey[i] ===keyPrint[i]) ? scoreVar = scoreVar + 1: scoreVar= scoreVar -2;
                 draw();
                 i++;
-              
-                console.log(recordKey);
                 } else{
                     this.key9.keyColor = "darkred";
                 }    
@@ -223,12 +211,9 @@ var recordKey = [];
                   this.key10.keyColor = "red";
                   recordKey.push("f");
                   pianoSoundF.play();
-                  
                   (recordKey[i] ===keyPrint[i]) ? scoreVar = scoreVar + 1: scoreVar= scoreVar -2;
                   draw();
                   i++;
-                  
-                  console.log(recordKey);
                   } else{
                       this.key10.keyColor = "darkred";
                     }                    
